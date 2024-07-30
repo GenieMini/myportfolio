@@ -1,9 +1,10 @@
-import { WaveGroup } from "./point.js";
+import { WaveGroup } from "./waves.js";
+
 class App {
   constructor() {
     this.canvas = document.createElement("canvas");
     this.ctx = this.canvas.getContext("2d");
-    document.body.appendChild(this.canvas);
+    document.getElementById("wave").appendChild(this.canvas);
 
     this.WaveGroup = new WaveGroup();
 
@@ -24,7 +25,7 @@ class App {
     this.WaveGroup.resize(this.stageWidth, this.stageHeight);
   }
 
-  animate(t) {
+  animate() {
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
     this.WaveGroup.draw(this.ctx);

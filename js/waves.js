@@ -4,9 +4,9 @@ class Point {
     this.y = y;
 
     this.fixedY = y;
-    this.speed = 0.02;
+    this.speed = 0.01;
     this.cur = index;
-    this.max = Math.random() * 100 + 150;
+    this.max = Math.random() * 4 + 150;
   }
 
   update() {
@@ -80,7 +80,8 @@ export class WaveGroup {
     this.totalWaves = 3;
     this.totalPoints = 6;
 
-    this.color = ["#FFC100", "#FF9A00", "#FF7400"];
+    //this.color = ["#FFC100", "#FF9A00", "#FF7400"];
+    this.color = ["#FF740055", "#FF9A00CC", "#FFC100"];
 
     this.waves = [];
 
