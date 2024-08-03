@@ -19,16 +19,15 @@ canvas {
   height: 100%;
 }
 
-@import url("https://fonts.cdnfonts.com/css/muro");
-#hero h1 {
+/* @import url("https://fonts.cdnfonts.com/css/muro"); */
+#hero h2 {
   color: white;
-  font-family: "Muro";
-  position: absolute;
-  left: 150px;
-  top: 150px;
-  font-size: 6em;
+  font-family: "Roboto", sans-serif;
+  font-size: 3em;
   letter-spacing: 0.2rem;
   text-shadow: 4px 4px rgba(15, 30, 110, 0.467);
+  opacity: 0%;
+  animation: need-a 2s ease forwards 2s;
 }
 
 p {
@@ -51,7 +50,9 @@ p {
 }
 
 #hero {
-  height: 400px;
+  margin: auto;
+  margin-top: 10%;
+  width: fit-content;
 }
 
 #wave {
@@ -84,4 +85,74 @@ p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Animations */
+
+/* Hero logo text */
+.herologo path:nth-child(1) {
+  animation: line-anim 3s ease forwards, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(2) {
+  animation: line-anim 3s ease forwards 0.2s, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(3) {
+  animation: line-anim 3s ease forwards 0.4s, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(4) {
+  animation: line-anim 3s ease forwards 0.6s, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(5) {
+  animation: line-anim 3s ease forwards 0.8s, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(6) {
+  animation: line-anim 3s ease forwards 1s, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(7) {
+  animation: line-anim 3s ease forwards 1.2s, filly 0.5s ease forwards 3s;
+}
+
+.herologo path:nth-child(8) {
+  animation: line-anim 3s ease forwards 1.4s, filly 0.5s ease forwards 3s;
+}
+
+/* keyframes */
+@keyframes need-a {
+  to {
+    opacity: 50%;
+  }
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes filly {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+@keyframes rise {
+  from {
+    min-height: 70%;
+  }
+  to {
+    min-height: 20%;
+  }
+}
+
+.herologo {
+  width: 100%;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  stroke-linecap: round;
 }
