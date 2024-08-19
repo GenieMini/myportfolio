@@ -30,10 +30,6 @@ canvas {
   animation: need-a 2s ease forwards 2s;
 }
 
-p {
-  color: white;
-}
-
 #header {
   background-image: linear-gradient(#242b32, #111);
   font-family: "Roboto", sans-serif;
@@ -63,6 +59,7 @@ p {
 #intro {
   background-color: #ffc100;
   height: 500px;
+  padding-top: 200px;
 }
 
 .nav {
@@ -86,6 +83,35 @@ p {
   background-color: #ffb600;
   color: #111;
   cursor: pointer;
+}
+
+.article {
+  color: #242b32;
+  border-radius: 25px;
+  background: linear-gradient(315deg, #ff008d1f, transparent);
+  padding: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: 5px 5px 20px rgba(255, 0, 129, 0.06);
+}
+
+.article p {
+  font-family: sans-serif, Roboto;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.title-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 3.5rem;
+  text-shadow: 0 2px 3px #4c2a1073;
+}
+.margin25 {
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 /* SCROLLBAR _____*/

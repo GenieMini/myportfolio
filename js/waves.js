@@ -9,8 +9,8 @@ class Point {
     this.max = Math.random() * 4 + 150;
   }
 
-  update() {
-    this.cur += this.speed;
+  update(multi = 1) {
+    this.cur += this.speed * multi;
     this.y = this.fixedY + Math.sin(this.cur) * this.max;
   }
 }
@@ -55,7 +55,7 @@ class Wave {
 
     for (let i = 0; i < this.totalPoints; i++) {
       if (i < this.totalPoints - 1) {
-        this.points[i].update();
+        this.points[i].update(0.5 + this.index * 0.2);
       }
 
       const cx = (prevX + this.points[i].x) / 2;
@@ -81,7 +81,7 @@ export class WaveGroup {
     this.totalPoints = 6;
 
     //this.color = ["#FFC100", "#FF9A00", "#FF7400"];
-    this.color = ["#FF740055", "#FF9A00CC", "#FFC100"];
+    this.color = ["#FF740055", "#DF8502", "#FFC100"];
 
     this.waves = [];
 
