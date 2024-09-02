@@ -53,11 +53,20 @@ canvas {
 }
 
 #wave {
-  height: 500px;
+  height: 600px;
+  animation: rise 3s ease forwards;
 }
 
 #intro {
   background-color: #ffc100;
+  color: #242b32;
+  height: 500px;
+  padding-top: 200px;
+}
+
+#portfolio {
+  background-color: #023047;
+  color: white;
   height: 500px;
   padding-top: 200px;
 }
@@ -86,7 +95,6 @@ canvas {
 }
 
 .article {
-  color: #242b32;
   border-radius: 25px;
   background: linear-gradient(315deg, #ff008d1f, transparent);
   padding: 25px;
@@ -191,12 +199,17 @@ canvas {
     fill: #fff;
   }
 }
-@keyframes rise {
+/* @keyframes rise {
   from {
     min-height: 70%;
   }
   to {
     min-height: 20%;
+  }
+} */
+@keyframes rise {
+  to {
+    height: 200px;
   }
 }
 
