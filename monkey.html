@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monkey</title>
+  </head>
+  <body>
+    <audio id="my_audio" loop preload>
+      <source type="audio/mpeg" />
+    </audio>
+    <div>
+      <!-- <video autoplay muted>
+        <source src="./monkey/mokey.webm" type="video/webm" />
+      </video> -->
+    </div>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./monkey/monkey2.webp");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+<script>
+  let songID = Math.floor(Math.random() * 2);
+  let audio = 0;
+  if (songID == 0) {
+    audio = new Audio("./monkey/The Day Of Night.mp3");
+  } else {
+    audio = new Audio("./monkey/Guts Theme Berserk.mp3");
+  }
+
+  audio.volume = 0.2;
+  audio.loop = true;
+
+  document.body.addEventListener("click", function () {
+    audio.play();
+  });
+</script>
