@@ -77,11 +77,11 @@ class Wave {
 
 export class WaveGroup {
   constructor() {
-    this.totalWaves = 3;
+    this.totalWaves = 1;
     this.totalPoints = 6;
 
-    //this.color = ["#FFC100", "#FF9A00", "#FF7400"];
-    this.color = ["#FF740055", "#DF8502", "#FFC100"];
+    //this.color = ["#FF740055", "#DF8502", "#FFC100"];
+    this.color = ["#374358"];
 
     this.waves = [];
 

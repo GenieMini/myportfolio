@@ -49,6 +49,7 @@ canvas {
 #hero {
   margin: auto;
   margin-top: 10%;
+  margin-bottom: 10%;
   width: fit-content;
 }
 
@@ -58,15 +59,14 @@ canvas {
 }
 
 #intro {
-  background-color: #ffc100;
+  background-color: #374358;
   color: #242b32;
   height: 500px;
   padding-top: 200px;
 }
 
-#portfolio {
+.portfolio {
   background-color: #023047;
-  color: white;
   height: 500px;
   padding-top: 200px;
 }
@@ -96,17 +96,46 @@ canvas {
 
 .article {
   border-radius: 25px;
-  background: linear-gradient(315deg, #ff008d1f, transparent);
+  background: linear-gradient(315deg, #00ff0e54, transparent);
   padding: 25px;
   padding-left: 50px;
   padding-right: 50px;
-  box-shadow: 5px 5px 20px rgba(255, 0, 129, 0.06);
+  color: white;
 }
 
 .article p {
   font-family: sans-serif, Roboto;
   font-size: 1.5em;
   line-height: 1.5em;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 250px;
+  height: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, #09c, #f44);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
 .title-text {
@@ -116,10 +145,25 @@ canvas {
   letter-spacing: 2px;
   line-height: 3.5rem;
   text-shadow: 0 2px 3px #4c2a1073;
+  padding-bottom: 3%;
 }
 .margin25 {
   margin-left: 25%;
   margin-right: 25%;
+}
+
+.midtextlink {
+  text-decoration: none;
+  color: #ffb600;
+}
+
+.monkey {
+  opacity: 6%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 60px;
 }
 
 /* SCROLLBAR _____*/
