@@ -71,6 +71,21 @@ canvas {
   padding-top: 200px;
 }
 
+.footer {
+  color: white;
+  background-color: brown;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a img {
+  width: 50px;
+}
+
 .nav {
   display: flex;
   gap: 50px;
