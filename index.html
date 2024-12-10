@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link href="https://fonts.cdnfonts.com/css/muro" rel="stylesheet" />
     <title>&#60;Sharif&#62;</title>
   </head>
   <body>
     <div id="header">
       <div class="header-name">
-        <h1>Sharif Outagourte</h1>
-        <h2><i>Web developer</i></h2>
+        <h1 style="letter-spacing: 2px">Sharif Outagourte</h1>
+        <h2>
+          <i style="letter-spacing: 2px; color: #d7fae1">Web developer</i>
+        </h2>
       </div>
-      <div class="nav">
+      <!-- <div class="nav">
         <a>About </a>
         <a>Gamedev</a>
-      </div>
+      </div> -->
     </div>
     <div id="hero">
       <h2>Need a</h2>
@@ -79,69 +81,113 @@
         ></path>
       </svg>
     </div>
-    <div id="wave"></div>
+    <!-- <div id="wave"></div> -->
+    <div style="transform: translateY(10px)">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#2689d7"
+          fill-opacity="1"
+          d="M0,64L40,80C80,96,160,128,240,144C320,160,400,160,480,165.3C560,171,640,181,720,202.7C800,224,880,256,960,256C1040,256,1120,224,1200,197.3C1280,171,1360,149,1400,138.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <div class="portfolio">
+      <h1 class="bigtext">PORTFOLIO</h1>
+      <div class="article margin25">
+        <h2 class="title-text">My work</h2>
+        <div class="cards">
+          <a href="https://www.wijgammelgard.se/" target="_blank"
+            ><img src="./img/card-wij.png" alt="link-to-wij"
+          /></a>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <p>Please hire me so i can put more here 👍</p>
+      </div>
+    </div>
+    <div
+      style="
+        height: 200px;
+        background: linear-gradient(180deg, #2689d7, #23407b);
+      "
+    >
+      <h1 class="bigtext2">----自分</h1>
+    </div>
     <div id="intro">
       <div class="article margin25">
         <h2 class="title-text">About me</h2>
         <p>
-          My name is Sharif, I've always loved programming since I was a kid.
-          Currently working on my bachelor's thesis for webprogramming. I find
-          it fun to work with UI and UX, but ive d
+          <span style="font-size: 1.4em">M</span>y name is Sharif, programming
+          is something I've been involved with since I was 13, when I delved
+          deeply into game development. Ten years later, it remains my hobby. I
+          enjoy learning new things, and once I start programming, I find it
+          hard to stop. Problem-solving has thus become a natural part of my
+          life.
         </p>
+        <br /><br /><br />
+        <h3 style="letter-spacing: 10px; font-family: cursive">
+          Programming knowledge:
+        </h3>
+        <br />
         <div id="skills">
-          <table>
-            <tbody>
-              <tr>
-                <td>JS</td>
-                <td><progress value="80" max="100"></progress></td>
-              </tr>
-              <tr>
-                <td>CSS</td>
-                <td><progress value="32" max="100"></progress></td>
-              </tr>
-            </tbody>
-          </table>
+          <h3>HTML</h3>
+          <h3>PHP</h3>
+          <h3>JavaScript</h3>
+          <h3>TypeScript</h3>
+          <h3>SCSS</h3>
+          <h3>Express.js</h3>
+          <h3>React</h3>
+          <h3>Vue</h3>
+          <h3>Python</h3>
+          <h3>SQL</h3>
+          <h3>PostgreSQL</h3>
+          <h3>Flask</h3>
+          <h3>MongoDB</h3>
+          <h3>Docker</h3>
         </div>
-      </div>
-    </div>
-    <div class="portfolio">
-      <div class="article margin25">
-        <h2 class="title-text">Portfolio</h2>
-        <p>
-          Since this is the start of my career, I don't really have much to
-          show.
-        </p>
-      </div>
-    </div>
-    <div id="portfolio">
-      <div class="article margin25">
-        <h2 class="title-text">Hobby as gamedev</h2>
-        <p>
-          My love for programming really started with being a gamedev and just
-          making stuff in Gamemaker Studios. I love video games, kinda feels
-          <a href="https://www.backloggd.com/u/Geniemini/" class="midtextlink"
-            >like</a
-          >
-          i've played all of them at this point. And I've always wanted to
-          create a game myself that makes people just as happy as when i play
-          zelda games for example. There's always something new to learn which
-          keeps gamedev exiting.
-        </p>
       </div>
     </div>
 
     <footer>
       <div class="footer">
-        <a><img src="img/linkedin_icon.svg" /></a>
-        <a><img src="img/github-mark-white.svg" /></a>
+        <a
+          href="https://www.linkedin.com/in/sharif-outagourte-798071278/"
+          target="_blank"
+          ><img src="./img/linkedin_icon.svg"
+        /></a>
+        <a href="https://github.com/GenieMini" target="_blank"
+          ><img src="./img/github-mark-white.svg"
+        /></a>
+        <h2 style="color: white; font-family: monospace">
+          sharif.ou01@gmail.com
+        </h2>
       </div>
       <div>
-        <a href="/monkey.html"
+        <a href="./monkey.html"
           ><img src="./monkey/Monk.png" alt="Monkey" class="monkey"
         /></a>
       </div>
     </footer>
   </body>
 </html>
+
+<script>
+  div = document.getElementsByClassName("bigtext")[0];
+  div1 = document.getElementsByClassName("bigtext2")[0];
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 150) {
+        div.classList.add("visibletext");
+      }
+      if (window.scrollY > 1000) {
+        div1.classList.add("visibletext2");
+      }
+    },
+    false
+  );
+</script>
 
 <!-- <script type="module" src="./js/main.js"></script> -->

@@ -3,6 +3,19 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "CaslonGraphique-Opti";
+  src: url("../font/CaslonGraphique/CaslonGraphique-Opti.ttf.woff")
+      format("woff"),
+    url("../font/CaslonGraphique/CaslonGraphique-Opti.ttf.svg#CaslonGraphique-Opti")
+      format("svg"),
+    url("../font/CaslonGraphique/CaslonGraphique-Opti.ttf.eot"),
+    url("../font/CaslonGraphique/CaslonGraphique-Opti.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -49,8 +62,9 @@ canvas {
 #hero {
   margin: auto;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 25%;
   width: fit-content;
+  animation: shrink 3s ease forwards;
 }
 
 #wave {
@@ -59,27 +73,77 @@ canvas {
 }
 
 #intro {
-  background-color: #374358;
+  background-color: #23407b;
   color: #242b32;
-  height: 500px;
+  min-height: 600px;
   padding-top: 200px;
 }
 
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills h3 {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  background-color: #0000006b;
+  padding: 9px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
 .portfolio {
-  background-color: #023047;
-  height: 500px;
+  background-color: #2689d7;
+  min-height: 600px;
   padding-top: 200px;
+}
+
+.bigtext {
+  font-family: CaslonGraphique-Opti;
+  color: #231a1a00;
+  position: absolute;
+  font-size: 16vw;
+  transform: translate(-3%, -130%);
+  pointer-events: none;
+  width: 103%;
+  overflow: hidden;
+  letter-spacing: 5px;
+  transition: color 2s ease;
+}
+
+.bigtext2 {
+  font-family: CaslonGraphique-Opti;
+  color: #231a1a00;
+  position: absolute;
+  font-size: 16vw;
+  transform: translate(-3%, -26%);
+  pointer-events: none;
+  overflow: hidden;
+  letter-spacing: 15px;
+  transition: color 2s ease;
+  white-space: nowrap;
+}
+
+.visibletext {
+  color: #007cc4;
+  mix-blend-mode: difference;
+}
+
+.visibletext2 {
+  color: #0e212c;
+  mix-blend-mode: difference;
 }
 
 .footer {
   color: white;
-  background-color: brown;
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 60px;
   padding: 30px;
   justify-content: center;
   align-items: center;
+  min-height: 100px;
 }
 
 .footer a img {
@@ -111,7 +175,7 @@ canvas {
 
 .article {
   border-radius: 25px;
-  background: linear-gradient(315deg, #00ff0e54, transparent);
+  /* background: linear-gradient(315deg, #00ff0e54, transparent); */
   padding: 25px;
   padding-left: 50px;
   padding-right: 50px;
@@ -122,6 +186,15 @@ canvas {
   font-family: sans-serif, Roboto;
   font-size: 1.5em;
   line-height: 1.5em;
+  letter-spacing: 2px;
+}
+
+.divider {
+  height: 2px;
+  border-width: 0;
+  background-color: white;
+  margin: 20px;
+  margin-bottom: 40px;
 }
 
 progress[value] {
@@ -157,11 +230,11 @@ progress[value]::-webkit-progress-value {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 4em;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 20px;
   line-height: 3.5rem;
-  text-shadow: 0 2px 3px #4c2a1073;
-  padding-bottom: 3%;
+  margin-bottom: 4%;
 }
+
 .margin25 {
   margin-left: 25%;
   margin-right: 25%;
@@ -179,6 +252,32 @@ progress[value]::-webkit-progress-value {
   left: 0;
   right: 0;
   width: 60px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #e7f5ff;
+  border-radius: 50%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.cards img {
+  width: 300px;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+}
+
+.cards img:hover {
+  transform: translate(0, -10px) rotate(-2deg);
+  box-shadow: 2px 2px 10px #0000007d;
 }
 
 /* SCROLLBAR _____*/
@@ -202,6 +301,13 @@ progress[value]::-webkit-progress-value {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.herologo {
+  width: 100%;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  stroke-linecap: round;
 }
 
 /* Animations */
@@ -258,23 +364,22 @@ progress[value]::-webkit-progress-value {
     fill: #fff;
   }
 }
-/* @keyframes rise {
-  from {
-    min-height: 70%;
-  }
-  to {
-    min-height: 20%;
-  }
-} */
+
 @keyframes rise {
   to {
     height: 200px;
   }
 }
 
-.herologo {
-  width: 100%;
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  stroke-linecap: round;
+@keyframes shrink {
+  to {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .margin25 {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
