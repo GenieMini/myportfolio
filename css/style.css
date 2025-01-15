@@ -51,7 +51,7 @@ canvas {
   justify-content: space-between;
   padding-left: calc(10px + 8%);
   padding-right: calc(10px + 8%);
-  padding-top: 20px;
+  padding-top: 45px;
 }
 
 #header h2,
@@ -76,7 +76,8 @@ canvas {
   background-color: #23407b;
   color: #242b32;
   min-height: 600px;
-  padding-top: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #skills {
@@ -131,8 +132,9 @@ canvas {
 }
 
 .visibletext2 {
-  color: #0e212c;
+  color: #44ff00;
   mix-blend-mode: difference;
+  width: 101.4%;
 }
 
 .footer {
